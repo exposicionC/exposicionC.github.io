@@ -13,12 +13,12 @@
     <div class="container">
       <div id="branding">
         <img src="cicon.png" alt="JavaScript">
-       
+
       </div>
       <nav>
         <ul>
           <li><a href="index.html">Contenido</a></li>
-          <li class="current"><a href="about.html">Ejemplo de Códigos</a></li>
+          <li class="current"><a href="about.html">Sintaxis</a></li>
           <li><a href="services.html">Recursos de Aprendizaje</a></li>
         </ul>
       </nav>
@@ -27,7 +27,7 @@
 
   <section id="newsletter">
     <div class="container">
-      <h1>Sintaxis de JavaScript</h1>
+      <h1>Ejemplo de Programación</h1>
 
     </div>
   </section>
@@ -37,54 +37,42 @@
       <article id="main-col">
 
         <h3>
-          La sintaxis de JavaScript es muy similar a la de otros lenguajes de programación como Java y C. Las normas
-          básicas que definen la sintaxis de JavaScript son las siguientes:
+          El siguiente programa lee por teclado un año y calcula y muestra si es bisiesto. Para realizar el cálculo
+          utiliza una función llamada bisiesto.
+          La función bisiesto recibe el año leído por teclado, comprueba si es o no bisiesto y devuelve 1 si lo es ó 0
+          si no lo es.
+
         </h3>
         <p class="dark">
-          ➤No se tienen en cuenta los espacios en blanco y las nuevas líneas: como sucede con XHTML, el intérprete de
-          JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma
-          adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)<br>
-          ➤Se distinguen las mayúsculas y minúsculas: al igual que sucede con la sintaxis de las etiquetas y elementos
-          XHTML. Sin embargo, si en una página XHTML se utilizan indistintamente mayúsculas y minúsculas, la página se
-          visualiza correctamente, siendo el único problema la no validación de la página. En cambio, si en JavaScript
-          se intercambian mayúsculas y minúsculas el script no funciona.<br>
-          ➤No se define el tipo de las variables: al crear una variable, no es necesario indicar el tipo de dato que
-          almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución
-          del script.<br>
-          ➤No es necesario terminar cada sentencia con el carácter de punto y coma (;): en la mayoría de lenguajes de
-          programación, es obligatorio terminar cada sentencia con el carácter ;. Aunque JavaScript no obliga a hacerlo,
-          es conveniente seguir la tradición de terminar cada sentencia con el carácter del punto y coma (;).<br>
-          ➤Se pueden incluir comentarios: los comentarios se utilizan para añadir información en el código fuente del
-          programa. Aunque el contenido de los comentarios no se visualiza por pantalla, si que se envía al navegador
-          del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la
-          información incluida en los comentarios.
-        </p>
-        <h3>Variables</h3>
-        <p class="dark">
-          Las variables en JavaScript se crean mediante la palabra reservada var. Se puede realizar en JavaScript de la
-          siguiente manera:
-          var numero_1 = 3;<br>
-          var numero_2 = 1;<br>
-          var resultado = numero_1 + numero_2;<br>
-        </p>
-        <h3> Operadores</h3>
-        <p class="dark">
-          Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores
-          y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos
-          complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.
-        </p>
-        <h3>Estructuras de control de flujo</h3>
-        <p class="dark">
-          Las estructuras de control de flujo, que son instrucciones del tipo "si se cumple esta condición, hazlo; si no
-          se cumple, haz esto otro". También existen instrucciones del tipo "repite esto mientras se cumpla esta
-          condición".
+        <pre>
+          <code>
+            // Programa que lee un año y muestra si es o no bisiesto
+#includ iostream
+using namespace std;
+int bisiesto(int);   //declaración o prototipo de la función
+int main()
+{
+   int anio;
+   cout<<"Introduce a"<<(char)164<<"o: "; //164 ascii de ñ
+   cin >> anio;
+   if(bisiesto(anio))  //llamada a la función
+      cout << "Bisiesto" << endl;
+   else
+      cout << "No es bisiesto" << endl;
+   system("pause"); 
+}
+int bisiesto(int a)   //definición de la función    
+{
+    if(a%4==0 and a%100!=0 or a%400==0)
+        return 1;
+    else
+        return 0;
+}
 
-          Si se utilizan estructuras de control de flujo, los programas dejan de ser una sucesión lineal de
-          instrucciones para convertirse en programas inteligentes que pueden tomar decisiones en función del valor de
-          las variables.
-
-
+          </code>
+         </pre>
         </p>
+        
       </article>
 
       <aside id="sidebar">
