@@ -114,7 +114,7 @@ header a:hover{
 /* Newsletter */
 #newsletter{
   padding:15px;
-  color:#000000;
+  color:#ffffff;
   background:blue;
 }
 
@@ -181,7 +181,7 @@ ul#services li{
 footer{
   padding:20px;
   margin-top:20px;
-  color:#000000;
+  color:#ffffff;
   background-color:blue;
   text-align: center;
 }
